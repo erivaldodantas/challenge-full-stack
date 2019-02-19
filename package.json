@@ -1,0 +1,13 @@
+{
+  "name": "sizebay-challenger",
+  "version": "1.0.0",
+  "description": "Challenger full-statck for Sizebay.",
+  "main": "index.js",
+  "repository": "https://github.com/erivaldodantas/challenge-full-stack.git",
+  "author": "Erivaldo Dantas <erivaldo.dantas85@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.13"
+  }
+}
