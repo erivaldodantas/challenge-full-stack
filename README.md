@@ -22,14 +22,15 @@ Os principais recursos suportados pela API são:
 - Review
 
 | recurso | descrição |
-|: -------------- |: -------------------------------- - |
+| --- | --- |
 | `/employee` | retorna uma lista de os empregados cadastrados.|
 | `/review` | retorna uma lista de todas as revisões, respondidas ou não.|
 
 
 ### Employee
+
 | recurso | descrição |
-|: ---------------------------- |: ------------------ ---------------- |
+| --- | --- |
 | `GET:/employee/{id}` | Retorna o empregado correspondente ao ID do parâmetro. |
 | `GET:/employee/{pis}/pis` | Retorna  empregado correspondente aquele PIS, no caso do início da sessão do Empregado. |
 | `POST:/employee` | Cria um novo empregado. |
@@ -46,8 +47,9 @@ Os principais recursos suportados pela API são:
 ```
 
 ### Employee
+
 | recurso | descrição |
-|: ---------------------------- |: ------------------ ---------------- |
+| --- | --- |
 | `GET:/employee/{id}` | Retorna o empregado correspondente ao ID do parâmetro. |
 | `GET:/employee/{pis}/pis` | Retorna  empregado correspondente aquele PIS, no caso do início da sessão do Empregado. |
 | `POST:/employee` | Cria um novo empregado. |
@@ -55,6 +57,7 @@ Os principais recursos suportados pela API são:
 | `DELETE:/employee/{id}` | Remove um empregado correspondente ao ID informado. |
 
 ### Scheme
+
 ```
 {
     response: 'Response of employee',
