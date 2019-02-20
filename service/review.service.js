@@ -19,6 +19,12 @@ const getByEmployeeRevisor = (req, res, next) => {
         .catch(err => next(err))
 }
 
+const getPendingReviewEmployee = (req, res, next) => {
+    review.getPendingReviewEmployee(req.params.employee)
+        .then(reviews => res.json(reviews))
+        .catch(err => next(err))
+}
+
 const create = (req, res, next) => {
     review.create(req.body)
         .then(() => res.status(200).send())
@@ -38,5 +44,5 @@ const remove = (req, res, next) => {
 }
 
 module.exports = {
-    getAll, getById, getByEmployeeRevisor, create, update, remove
+    getAll, getById, getByEmployeeRevisor, create, update, remove, getPendingReviewEmployee
 }

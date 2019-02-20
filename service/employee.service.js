@@ -13,7 +13,11 @@ const getById = (req, res, next) => {
         .catch(err => next(err));
 }
 
-
+const getByPis = (req, res, next) => {
+    employeeService.getByPis(req.params.pis)
+        .then(employee => employee ? res.json(employee) : res.sendStatus(404))
+        .catch(err => next(err));
+}
 
 const create = (req, res, next) => {
     employeeService.create(req.body)
@@ -34,5 +38,5 @@ const remove = (req, res, next) => {
 }
 
 module.exports = {
-    getAll, getById, create, update, remove
+    getAll, getById, create, update, remove, getByPis
 }

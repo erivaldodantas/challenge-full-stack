@@ -6,7 +6,11 @@ const getAll = async () => {
 }
 
 const getById = async (id) => {
-   return await EmployeeModel.findById(id)
+    return await EmployeeModel.findById(id)
+}
+
+const getByPis = async (pis) => {
+    return await EmployeeModel.findOne({ pis })
 }
 
 const create = async (data) => {
@@ -33,6 +37,7 @@ const remove = async (id) => {
 module.exports = {
     getAll,
     getById,
+    getByPis,
     create,
     update,
     remove

@@ -12,7 +12,8 @@ const schema = new Schema({
         ref: 'Employee'
     },
     responsedAt: Date,
-    assignmentDate: { type: Date, default: Date.now }
+    assignmentDate: { type: Date, default: Date.now },
+    status: { type: String, enum: ['pending', 'finish'], default: 'pending' },
 });
 
 schema.set('toJSON', { virtuals: true });

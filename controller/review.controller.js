@@ -13,6 +13,10 @@ const getByEmployeeRevisor = async (employeeId) => {
     return await ReviewModel.find({from: employeeId}).populate('from').populate('to').exec()
 }
 
+const getPendingReviewEmployee = async (employeeId) => {
+    return await ReviewModel.find({from: employeeId, status: 'pending' }).populate('from').populate('to').exec()
+}
+
 const create = async (data) => {
 
     const employee = new ReviewModel(data)
@@ -38,6 +42,7 @@ module.exports = {
     getAll,
     getById,
     getByEmployeeRevisor,
+    getPendingReviewEmployee,
     create,
     update,
     remove
