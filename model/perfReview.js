@@ -2,9 +2,6 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
-    name: {type: String, required: true},
-    nis: {type: String, required: true},
-
     response: String,
     from: {
         type: mongoose.Schema.Types.ObjectId,
@@ -15,7 +12,7 @@ const schema = new Schema({
         ref: 'Employee'
     },
     responsedAt: Date,
-    dateAssignment: Date
+    assignmentDate: { type: Date, default: Date.now }
 });
 
 schema.set('toJSON', { virtuals: true });

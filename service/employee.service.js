@@ -18,7 +18,7 @@ const getById = (req, res, next) => {
 const create = (req, res, next) => {
     employeeService.create(req.body)
         .then(() => res.status(200).send())
-        .catch(err => next(err));
+        .catch(err => next(err)); 
 }
 
 const update = (req, res, next) => {

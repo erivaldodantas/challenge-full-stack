@@ -8,9 +8,9 @@ require('./config/mongo')
 app.use(bodyParser.json())
 app.use(cors())
 
-app.use(require('./controller/helpers').errorHandle)
-
 app.use('/api', routers)
+
+app.use(require('./controller/helpers').errorHandle)
 
 const port = process.env.PORT || 3030
 app.listen(port, () => console.log(`\API Runing in ${port}`))
