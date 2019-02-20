@@ -36,7 +36,7 @@ Os principais recursos suportados pela API são:
 | `PUT:/employee/{id}` | Atualiza o empregado com o ID informado com as informações enviadas no Body-JSON. |
 | `DELETE:/employee/{id}` | Remove um empregado correspondente ao ID informado. |
 
-####Scheme
+###Scheme
 ```
 {
     _id:"hkaf78sd328",
@@ -54,7 +54,7 @@ Os principais recursos suportados pela API são:
 | `PUT:/employee/{id}` | Atualiza o empregado com o ID informado com as informações enviadas no Body-JSON. |
 | `DELETE:/employee/{id}` | Remove um empregado correspondente ao ID informado. |
 
-####Scheme
+###Scheme
 ```
 {
     response: 'Response of employee',
