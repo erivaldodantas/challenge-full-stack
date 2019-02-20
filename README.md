@@ -19,7 +19,7 @@ Ex: `localhost:3030/api`- Executando em localhost(Desenvolvimento)
 Os principais recursos suportados pela API são:
 
 - Employee
-- Review
+- Performance Review
 
 | recurso | descrição |
 | --- | --- |
@@ -46,15 +46,16 @@ Os principais recursos suportados pela API são:
 }
 ```
 
-### Employee
+### Performance Review
 
 | recurso | descrição |
 | --- | --- |
-| `GET:/employee/{id}` | Retorna o empregado correspondente ao ID do parâmetro. |
-| `GET:/employee/{pis}/pis` | Retorna  empregado correspondente aquele PIS, no caso do início da sessão do Empregado. |
-| `POST:/employee` | Cria um novo empregado. |
-| `PUT:/employee/{id}` | Atualiza o empregado com o ID informado com as informações enviadas no Body-JSON. |
-| `DELETE:/employee/{id}` | Remove um empregado correspondente ao ID informado. |
+| `GET:/review/{id}` | Retorna a avaliação de desempenho correspondente ao ID do parâmetro. |
+| `GET:/review/{employeeID}/from` | Retorna as avaliação de performance na qual o empregado informado no parâmetro respondeu ou responderá. |
+| `GET:/review/{employeeID}/pending` | Retorna apenas as avaliação de performance na qual o empregado necessita responder. |
+| `POST:/review` | Cria uma nova avaliação a ser respondida pelo empregado. |
+| `PUT:/review/{id}` | Atualiza a revisão de performance, e muda o status para finish caso seja respondida. |
+| `DELETE:/review/{id}` | Remove revisão de performance respondida ou não. |
 
 ### Scheme
 

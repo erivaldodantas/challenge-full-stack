@@ -6,15 +6,15 @@ const getAll = async () => {
 }
 
 const getById = async (id) => {
-   return await ReviewModel.findById(id).populate('from').populate('to').exec()
+    return await ReviewModel.findById(id).populate('from').populate('to').exec()
 }
 
 const getByEmployeeRevisor = async (employeeId) => {
-    return await ReviewModel.find({from: employeeId}).populate('from').populate('to').exec()
+    return await ReviewModel.find({ from: employeeId }).populate('from').populate('to').exec()
 }
 
 const getPendingReviewEmployee = async (employeeId) => {
-    return await ReviewModel.find({from: employeeId, status: 'pending' }).populate('from').populate('to').exec()
+    return await ReviewModel.find({ from: employeeId, status: 'pending' }).populate('from').populate('to').exec()
 }
 
 const create = async (data) => {
@@ -28,6 +28,8 @@ const update = async (id, data) => {
     const employee = await ReviewModel.findById(id);
 
     if (!employee) throw 'Employee not found';
+
+    if (data.response) data.status = 'finish'
 
     Object.assign(employee, data);
 
