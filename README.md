@@ -3,14 +3,14 @@ Por conta do tempo, como conversado, não consegui finalizar todo o desafio, foi
 
 Não foi feito controle de sessão na API, foi modelado o usuário no Mongo mas priorizei as funcionalidades.
 
-##Execução
+## Execução
 Antes da execução do projeto, devem ser instaladas as dependências, certifique-se de ter o `Node-v6` ou superior e instalar o gerenciador de dependencias `Yarn-v1.7+` e execute o seguinte comendo:
 `yarn install && yarn --cwd client install`
 Para executar o projeto abra 2 terminais e execute os comandos abaixo na raiz do repositório.
 Terminal 1 - API `# yarn && yarn start`
 Terminal 2 - API `# yarn --cwd client install && yarn --cwd client start`
 
-#API
+# API
 O base URL da API é formado pelo domínio do servidor e a aporta definida no arquivo `.env` acompanhados de `/api` - `[yourDomain]:[port]/api`.
 
 Ex: `localhost:3030/api`- Executando em localhost(Desenvolvimento)
@@ -36,7 +36,7 @@ Os principais recursos suportados pela API são:
 | `PUT:/employee/{id}` | Atualiza o empregado com o ID informado com as informações enviadas no Body-JSON. |
 | `DELETE:/employee/{id}` | Remove um empregado correspondente ao ID informado. |
 
-###Scheme
+### Scheme
 ```
 {
     _id:"hkaf78sd328",
@@ -54,7 +54,7 @@ Os principais recursos suportados pela API são:
 | `PUT:/employee/{id}` | Atualiza o empregado com o ID informado com as informações enviadas no Body-JSON. |
 | `DELETE:/employee/{id}` | Remove um empregado correspondente ao ID informado. |
 
-###Scheme
+### Scheme
 ```
 {
     response: 'Response of employee',
@@ -75,5 +75,5 @@ Os principais recursos suportados pela API são:
 ```
 
 
-##RESUMO
+## RESUMO
 O banco utilizado foi o MongoDB, apesar de feita a modelagem do usuário, não foi documentada pois não possui nem um endpoint para sua comunicação, como também a ausencia do Middleware de Autenticação.
