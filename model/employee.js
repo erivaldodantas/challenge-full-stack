@@ -1,8 +1,11 @@
 const mongoose = require('mongoose')
+const Schema = mongoose.Schema;
 
-module.exports = mongoose.model('Employee', {
-    name: String,
-    register: String,
-    user: String,
-    password: String
-})
+const schema = new Schema({
+    name: {type: String, required: true},
+    pis: {type: String, required: true},
+});
+
+schema.set('toJSON', { virtuals: true });
+
+module.exports = mongoose.model('Employee', schema);

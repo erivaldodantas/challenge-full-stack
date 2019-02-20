@@ -1,17 +1,23 @@
 const mongoose = require('mongoose')
+const Schema = mongoose.Schema;
 
-module.exports = mongoose.model('PerfReview', {
+const schema = new Schema({
+    name: {type: String, required: true},
+    nis: {type: String, required: true},
+
     response: String,
-    reviewer: {
+    from: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Employee'
     },
-    employee: {
+    to: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Employee'
     },
     responsedAt: Date,
-    pending: Boolean,
     dateAssignment: Date
+});
 
-})
+schema.set('toJSON', { virtuals: true });
+
+module.exports = mongoose.model('PerfReview', schema);

@@ -1,10 +1,10 @@
-const app = require('express')
-const controller = require('../controller/employee.controller')
+const app = require('express').Router()
+const service = require('../service/employee.service')
 
-app.get('/', controller.getAll)
-app.get('/:id', controller.getById)
-app.post('/', controller.create)
-app.put('/:id', controller.update)
-app.delete('/:id', controller.remove)
+app.get('/', service.getAll)
+app.get('/:id', service.getById)
+app.post('/', service.create)
+app.put('/:id', service.update)
+app.delete('/:id', service.remove)
 
 module.exports = app
